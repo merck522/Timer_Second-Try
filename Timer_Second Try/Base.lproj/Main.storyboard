@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Timer_Second_Try" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuJ-qL-lwB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Start:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dan-XV-w8O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQY-DQ-uvF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Stop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VEV-AA-CCh"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pac-xV-Oqx">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="269" width="400" height="162"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="Lw5-ff-R5f"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="EHk-B7-gzn"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUe-Y4-ANF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Start Timer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="51" y="436" width="76" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startTimer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="R0G-Ta-CTV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFN-b9-2bh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Stop Timer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="276" y="439" width="76" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopTimer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qV5-X4-8xN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kitchen Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAq-Rk-ve3">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2Zz-NC-iw5"/>
+                                    <constraint firstAttribute="width" constant="107" id="Cl0-T1-Heb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2Zz-NC-iw5"/>
+                                        <exclude reference="Cl0-T1-Heb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2Zz-NC-iw5"/>
+                                        <include reference="Cl0-T1-Heb"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zik-do-KTo">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="172" y="242" width="83" height="21"/>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIN-f9-wMb">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="1Yl-eK-NMY"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="68l-Mm-7zY"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cUe-Y4-ANF" firstAttribute="top" secondItem="Pac-xV-Oqx" secondAttribute="bottom" constant="18" id="4bw-pX-7WX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sQY-DQ-uvF" secondAttribute="trailing" constant="72" id="4cg-s6-smR"/>
+                            <constraint firstItem="lFN-b9-2bh" firstAttribute="baseline" secondItem="cUe-Y4-ANF" secondAttribute="baseline" id="7H0-cX-aSr"/>
+                            <constraint firstItem="Pac-xV-Oqx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7fE-QH-7c4"/>
+                            <constraint firstItem="FIN-f9-wMb" firstAttribute="trailing" secondItem="Pac-xV-Oqx" secondAttribute="trailing" id="8d9-xO-7ru"/>
+                            <constraint firstItem="tAq-Rk-ve3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="172" id="8sB-ct-PQa"/>
+                            <constraint firstItem="zik-do-KTo" firstAttribute="top" secondItem="FIN-f9-wMb" secondAttribute="bottom" constant="92" id="AE6-GF-6U2"/>
+                            <constraint firstItem="cUe-Y4-ANF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="35" id="LUY-I8-Qrm"/>
+                            <constraint firstItem="DuJ-qL-lwB" firstAttribute="centerX" secondItem="cUe-Y4-ANF" secondAttribute="centerX" id="Mem-rq-u63"/>
+                            <constraint firstItem="DuJ-qL-lwB" firstAttribute="baseline" secondItem="sQY-DQ-uvF" secondAttribute="baseline" id="OCd-a5-DOo"/>
+                            <constraint firstItem="tAq-Rk-ve3" firstAttribute="leading" secondItem="zik-do-KTo" secondAttribute="leading" id="S0z-SH-6pJ"/>
+                            <constraint firstItem="tAq-Rk-ve3" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="9" id="WeU-6L-2qn"/>
+                            <constraint firstItem="Pac-xV-Oqx" firstAttribute="top" secondItem="DuJ-qL-lwB" secondAttribute="bottom" constant="83" id="XJq-5Q-vVe"/>
+                            <constraint firstItem="DuJ-qL-lwB" firstAttribute="top" secondItem="FIN-f9-wMb" secondAttribute="bottom" constant="8" symbolic="YES" id="XYV-vO-fzU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lFN-b9-2bh" secondAttribute="trailing" constant="32" id="gEA-rN-RmX"/>
+                            <constraint firstItem="FIN-f9-wMb" firstAttribute="leading" secondItem="Pac-xV-Oqx" secondAttribute="leading" id="gEL-4c-10P"/>
+                            <constraint firstItem="FIN-f9-wMb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="lmg-vG-vDF"/>
+                            <constraint firstAttribute="trailing" secondItem="FIN-f9-wMb" secondAttribute="trailing" id="pJa-Fr-clP"/>
+                            <constraint firstItem="Pac-xV-Oqx" firstAttribute="top" secondItem="zik-do-KTo" secondAttribute="bottom" constant="8" symbolic="YES" id="s6P-Nv-kxL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="DuJ-qL-lwB"/>
+                                <exclude reference="sQY-DQ-uvF"/>
+                                <exclude reference="Pac-xV-Oqx"/>
+                                <exclude reference="cUe-Y4-ANF"/>
+                                <exclude reference="lFN-b9-2bh"/>
+                                <exclude reference="tAq-Rk-ve3"/>
+                                <exclude reference="zik-do-KTo"/>
+                                <exclude reference="FIN-f9-wMb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8d9-xO-7ru"/>
+                                <exclude reference="gEL-4c-10P"/>
+                                <exclude reference="lmg-vG-vDF"/>
+                                <exclude reference="pJa-Fr-clP"/>
+                                <exclude reference="7fE-QH-7c4"/>
+                                <exclude reference="XJq-5Q-vVe"/>
+                                <exclude reference="s6P-Nv-kxL"/>
+                                <exclude reference="8sB-ct-PQa"/>
+                                <exclude reference="S0z-SH-6pJ"/>
+                                <exclude reference="WeU-6L-2qn"/>
+                                <exclude reference="AE6-GF-6U2"/>
+                                <exclude reference="Mem-rq-u63"/>
+                                <exclude reference="OCd-a5-DOo"/>
+                                <exclude reference="XYV-vO-fzU"/>
+                                <exclude reference="4bw-pX-7WX"/>
+                                <exclude reference="LUY-I8-Qrm"/>
+                                <exclude reference="7H0-cX-aSr"/>
+                                <exclude reference="gEA-rN-RmX"/>
+                                <exclude reference="4cg-s6-smR"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="DuJ-qL-lwB"/>
+                                <include reference="sQY-DQ-uvF"/>
+                                <include reference="Pac-xV-Oqx"/>
+                                <include reference="cUe-Y4-ANF"/>
+                                <include reference="lFN-b9-2bh"/>
+                                <include reference="tAq-Rk-ve3"/>
+                                <include reference="zik-do-KTo"/>
+                                <include reference="FIN-f9-wMb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8d9-xO-7ru"/>
+                                <include reference="gEL-4c-10P"/>
+                                <include reference="lmg-vG-vDF"/>
+                                <include reference="pJa-Fr-clP"/>
+                                <include reference="7fE-QH-7c4"/>
+                                <include reference="XJq-5Q-vVe"/>
+                                <include reference="s6P-Nv-kxL"/>
+                                <include reference="8sB-ct-PQa"/>
+                                <include reference="S0z-SH-6pJ"/>
+                                <include reference="WeU-6L-2qn"/>
+                                <include reference="AE6-GF-6U2"/>
+                                <include reference="Mem-rq-u63"/>
+                                <include reference="OCd-a5-DOo"/>
+                                <include reference="XYV-vO-fzU"/>
+                                <include reference="4bw-pX-7WX"/>
+                                <include reference="LUY-I8-Qrm"/>
+                                <include reference="7H0-cX-aSr"/>
+                                <include reference="gEA-rN-RmX"/>
+                                <include reference="4cg-s6-smR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="TaskTimerPickerView" destination="Pac-xV-Oqx" id="4cN-gc-Lqn"/>
+                        <outlet property="pickerview" destination="FIN-f9-wMb" id="ysk-NW-Ino"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
